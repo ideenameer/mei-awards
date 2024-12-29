@@ -1,13 +1,24 @@
-// App.jsx
 import React from "react";
+import { Helmet } from "react-helmet";
 
 const App = () => {
   return (
-    <div className="bg-gradient-to-br from-purple-950 to-black min-h-screen flex flex-col items-center justify-center text-gold p-4">
+    <>
+     <Helmet>
+        <title>Mei International Film Festival - Awards</title>
+        <meta
+          name="description"
+          content="Mei International Film Festival, Film Festival, Cinema, Independent Films, Visionary Filmmakers, Diversity in Cinema, Creativity in Cinema, Directors of Tomorrow"
+        />
+        <meta name="keywords" content="Home" />
+      </Helmet>
+      <div className="bg-gradient-to-br from-purple-950 to-black min-h-screen flex flex-col items-center justify-center text-gold p-4">
       {/* Header Section */}
       <header className="text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide uppercase text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">
-          MEI INTERNATIONAL FILM FESTIVAL
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide uppercase text-transparent bg-clip-text relative">
+          <span className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 animate-text-gradient">
+            MEI INTERNATIONAL FILM FESTIVAL
+          </span>
         </h1>
         <p className="text-lg md:text-2xl italic mb-8 text-gray-300">
           In association with Vel Tech Rangarajan Dr. Sagunthala R&D Institute
@@ -78,6 +89,8 @@ const App = () => {
         </a>
       </div>
     </div>
+    </>
+   
   );
 };
 
